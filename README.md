@@ -65,25 +65,43 @@ This algorithm is known as EasyEnsemble. The classifier is an ensemble of AdaBoo
 
 ![Random oversamplig](Images/random_oversample_evaluation.png)
 
+For high risk credit, model is only 1% precise . That is 99% times it predict false positive for high risk credit. But on the other hand it is 74% accurate in identifying the high risk credit.  Using this model will more likely cause business loose more money than loosing money on high risk credit.
+ 
 ### 2. SMOTE:
 
 ![SMOTE Evaluation](Images/SMOTE_oversampling_evaluation.png)
+
+
+Results are pretty similar to no 1 (Random oversampling), though low risk sensitivity scores has imporved. Again this model would cause business to identify high number of loans as high risk and may loose money by declining these loans.
+
 
 ### 3. Cluster Centroid Undersampling
 
 ![CC Evaluation](Images/CC_Undersampling_Evaluation.png)
 
+This model is the work of all 6, it has the highest false postive for high risk. It will identify 10K loans as high risk when they are actually low risk.
+
 ### 4. SMOTEENN (Combined over and undersampling):
 
 ![SMOTEENN Evaluation](Images/SMOTEENN_Evaluation.png)
+
+
+This model is the 2nd worst of all 6. it is pretty simlar ot no 3 **Cluster Centroid Undersampling", with a better low risk sensitivty and F1 scores. But will still yelid high false positive for High risk credit.
 
 ### 5. Ensamle - Balanced Random Forest Classifer:
 
 ![Balanced Random Forest](Images/Balances_RandomForest_Evaluation.png)
 
-### 6. Ensamle - Balanced Easy Ensemble Claissifer:
+This is the 2nd best of all 6 models. Boosting and aggregation with Random forest alogrithim has imporved the number of true low risk credity prediction. But the no of false positive for high risk is sitll 2000+ loans compare to true positive 71. So this model is still cause to loose 2000+ loan , which are not actually high risk.
+### 6. Ensemble - Balanced Easy Ensemble Claissifer:
 
 ![Easy Ensemble Classifer](Images/Balanced_EasyEnsemble_Evaluation.png)
 
+This is the best model out of 6. With best accuracy rate, sensitive and prcision score for high risk loans as well as highest sensitivy and f1 score for low risk credit.
 
 ## Summary:
+Form all the 6 models, the no 6 alogrithim **Balanced Ensemble Classifier" is the best model to identify high risk loans based on accuracy, precision and sensitivity (recall) scores for High risk (bad credit) applications.
+However we should further re-evaluate this model after adding more pre-porcessing steps.
+    -   Standarization: As some of the features are high value compare to other features. e.g loan amounts comapre to features like home ownership
+    -   using Lable encoder for some features rather than creating dummy columns for each value.
+    -   we should add profit, margin as data points to see whhich model optimze the profit /margin for business 
