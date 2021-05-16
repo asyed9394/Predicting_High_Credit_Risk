@@ -101,7 +101,9 @@ This is the best model out of 6. With best accuracy rate, sensitive and prcision
 
 ## Summary:
 Form all the 6 models, the no 6 alogrithim **Balanced Ensemble Classifier" is the best model to identify high risk loans based on accuracy, precision and sensitivity (recall) scores for High risk (bad credit) applications.
+
 However we should further re-evaluate this model after adding more pre-porcessing steps.
-    -   Standarization: As some of the features are high value compare to other features. e.g loan amounts comapre to features like home ownership
-    -   using Lable encoder for some features rather than creating dummy columns for each value.
-    -   we should add profit, margin as data points to see whhich model optimze the profit /margin for business 
+
+-   Standarization: As some of the features are high value compare to other features. e.g loan amounts comapre to features like home ownership
+-   using Lable encoder for some features rather than creating dummy columns for each value.
+-   we should add profit, margin as data points to see whhich model optimze the profit /margin for business 
