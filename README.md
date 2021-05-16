@@ -65,7 +65,7 @@ This algorithm is known as EasyEnsemble. The classifier is an ensemble of AdaBoo
 
 ![Random oversamplig](Images/random_oversample_evaluation.png)
 
-For high risk credit, model is only 1% precise . That is 99% times it predict false positive for high risk credit. But on the other hand it is 74% accurate in identifying the high risk credit.  Using this model will more likely cause business loose more money than loosing money on high risk credit.
+For high risk credit, model is only 1% precise . That is 99% times it predict false positive for high risk credit. But on the other hand it is 74% accurate in identifying the high risk credit.  Using this model will more likely cause business loose business of credible low risk loan than loosing money on high risk credit.
  
 ### 2. SMOTE:
 
@@ -79,7 +79,7 @@ Results are pretty similar to no 1 (Random oversampling), though low risk sensit
 
 ![CC Evaluation](Images/CC_Undersampling_Evaluation.png)
 
-This model is the work of all 6, it has the highest false postive for high risk. It will identify 10K loans as high risk when they are actually low risk.
+This model is the worst of all 6, it has the highest false postive for high risk. It will identify 10K loans as high risk when they are actually low risk.
 
 ### 4. SMOTEENN (Combined over and undersampling):
 
