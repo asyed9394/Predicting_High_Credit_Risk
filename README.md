@@ -1,6 +1,6 @@
 # Credit Risk Analysis
 
-Create a model that can accurately predict credit risk for credit card applicat using 2019 credit card application data set. The prediction is to distinguish applicant with high credit risk from low credit risk.
+Create a model that can accurately predict credit risk for credit card applicant using 2019 credit card application data set. The prediction is to distinguish applicant with high credit risk from low credit risk.
 
 ## Project Overview:
 Credit risk is an inherently unbalanced classification problem, as good loans easily outnumber risky loans. Therefore, objective is to employ different techniques to train and evaluate models with unbalanced classes.  
